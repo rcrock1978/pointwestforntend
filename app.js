@@ -13,6 +13,9 @@ app.use(cors());
 //Set Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Body Parser Middleware
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 });
